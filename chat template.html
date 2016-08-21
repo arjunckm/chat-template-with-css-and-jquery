@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chat Templete</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="col-md-3 fixedonscroll">
+                <h3 class="headerstyle">Messages</h3>
+				<div class="showOnClick" style="display: none;">
+                <div class="row chat-window">
+                    <div class="talk-bubble-left tri-right left-top">
+                        <div class="talktext">
+                            <p><span>SuperAdmin:</span>&nbsp;<small>Device # 123 giving incorrect reading. PLEASE CHECK THE DEVICE!!!</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-right tri-right right-top">
+                        <div class="talktext">
+                            <p><span>Me:</span>&nbsp;<small>Device # 123 ISSUE FIXED...</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-left tri-right left-top">
+                        <div class="talktext">
+                            <p><span>SuperAdmin:</span>&nbsp;<small>Device # 123 giving incorrect reading. PLEASE CHECK THE DEVICE!!!</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-right tri-right right-top">
+                        <div class="talktext">
+                            <p><span>Me:</span>&nbsp;<small>Device # 123 ISSUE FIXED...</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-left tri-right left-top">
+                        <div class="talktext">
+                            <p><span>SuperAdmin:</span>&nbsp;<small>Device # 123 giving incorrect reading. PLEASE CHECK THE DEVICE!!!</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-right tri-right right-top">
+                        <div class="talktext">
+                            <p><span>Me:</span>&nbsp;<small>Device # 123 ISSUE FIXED...</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-left tri-right left-top">
+                        <div class="talktext">
+                            <p><span>SuperAdmin:</span>&nbsp;<small>Device # 123 giving incorrect reading. PLEASE CHECK THE DEVICE!!!</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-right tri-right right-top">
+                        <div class="talktext">
+                            <p><span>Me:</span>&nbsp;<small>Device # 123 ISSUE FIXED...</small></p>
+                        </div>
+                    </div>
+
+                    <div class="talk-bubble-left tri-right left-top">
+                        <div class="talktext">
+                            <p><span>SuperAdmin:</span>&nbsp;<small>Device # 123 giving incorrect reading. PLEASE CHECK THE DEVICE!!!</small></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <form id="formSendMsg">
+                    <div class="input-group myMessageBox">
+                        <span class="input-group-addon" id="message-text"><i class="fa fa-envelope"></i></span>
+                        <input type="text" id="myMessage" class="form-control" autocomplete="off" required="required" placeholder="Enter your message here..." aria-describedby="message-text" />
+                    </div>
+                </form>
+				</div>
+            </div>
+			
+<script type="text/javascript">
+    /* To Toggle the chat-window*/
+$(".headerstyle").click(function(){
+    $(".showOnClick").toggle('slow');
+});
+ 
+/*Chat functionality*/
+$('#formSendMsg').submit(function (e) {
+    e.preventDefault();
+ 
+    var myMsgBubble = $('<div>').addClass('talk-bubble-right tri-right right-top animated bounceInRight').appendTo('.chat-window');
+    var myMsgArea = $('<div>').addClass('talktext').appendTo(myMsgBubble);
+    var myMsgBody = $('<p>').appendTo(myMsgArea);
+    $('<span>').text('Me: ').appendTo(myMsgBody);
+    $('<small>').text($('#myMessage').val()).appendTo(myMsgBody);
+    $(".chat-window").animate({ scrollTop: $('.chat-window').prop("scrollHeight") }, 500);
+    var audio = new Audio('../audio/msg_pop.mp3');
+    audio.play();
+ 
+    $('#formSendMsg').trigger('reset');
+});
+</script>
+			</body>
+			</hyml>

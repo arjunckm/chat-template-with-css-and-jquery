@@ -1,0 +1,119 @@
+.talk-bubble-left {
+    margin: 5px 0px 5px 20px;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: #FF9800;
+    color: #fff;
+    box-shadow: 2px 2px 7px #333, 3px 2px 3px #FF9800;
+}
+
+.border {
+    border: 8px solid #666;
+}
+
+.round {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.tri-right.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.left-top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: #FF9800 transparent transparent transparent;
+}
+
+
+
+.talk-bubble-right {
+    margin: 5px 0px 5px 100px;
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: auto;
+    background-color: #009688;
+    color: #fff;
+    box-shadow: 0px 1px 2px #333, 0px 1px 2px #009688;
+}
+
+
+.chat-window {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 405px;
+}
+
+    .chat-window p span {
+        color: #000;
+        font-variant: small-caps;
+        font-weight: 900;
+    }
+
+.tri-right.border.right-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -40px;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+    border-color: #666 transparent transparent transparent;
+}
+
+.tri-right.right-top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: -20px;
+    top: 0px;
+    bottom: auto;
+    border: 20px solid;
+    border-color: #009688 transparent transparent transparent;
+}
+
+.talktext {
+    padding: 1em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+    .talktext p {
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+    }
+.headerstyle{
+    background-color: darkgray;
+    padding: 9px;
+    color: #fff;
+	cursor: pointer;
+}
+.fixedonscroll{
+position: fixed;
+    bottom: 0px;
+}
